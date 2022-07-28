@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/information.css" rel="stylesheet">
+
+    <title>Informações</title>
+</head>
+
+<body>
+    <nav class="py-2">
+        <div class="container" id="nav-menu">
+            <ul class="nav">
+                <li class="nav-item"><a href="/" class="nav-link link-dark px-2 active" aria-current="page">Início</a>
+                </li>
+                <li class="nav-item"><a href="/gallery.html" class="nav-link link-dark px-2">Fotos</a></li>
+                <li class="nav-item"><a href="/participate.html" class="nav-link link-dark px-2">Participe</a></li>
+                <li class="nav-item"><a href="/informacoes.html" class="nav-link link-dark px-2">Informações</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="location-info">
+            <div class="info">
+                <img src="static/img/informations.svg">
+                <div id="location-address">
+                    <p>Local: [local]</p>
+                    <p>Endereço: [endereço]</p>
+                    <p>Data: [data e hora]</p>
+                    <p>[local da cerimônia]</p>
+                </div>
+            </div>
+
+            <div class="useful-links">
+                <ul class="list-group">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modaUsefulLinks" class="list-group-item">Traje</a>
+                    <!--<a href="#" data-bs-toggle="modal" data-bs-target="#modaUsefulLinks" class="list-group-item">Hoteis</a>-->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modaUsefulLinks" class="list-group-item">Estacionamento</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modaConfirmation" class="list-group-item">Confirmar Presença</a>
+                    <a href="/confirmados.html" class="list-group-item">Presença confirmada</a>
+                    <a href="/padrinhos.html" class="list-group-item">Padrinhos</a>
+                </ul>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="modaUsefulLinks" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="titleModalUsefulLinks"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="modalBodyUsefulLinks" class="modal-body">
+                        </div>
+                        <div id="buttonClose" class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--modal-->
+
+            <!-- Modal email -->
+            <div class="modal fade" id="modaConfirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="titleModalConfirmation">Confirme sua presença aqui</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="document.location.reload(true);"></button>
+                        </div>
+                        <div id="modalBodyConfirmation" class="modal-body">
+                            <div class="container">
+                                <form method="post">
+                                    <!--Nome e sobrenome-->
+                                    <div class="col-sm-12">
+                                        <label for="name" class="form-label">Nome</label>
+                                        <input type="text" name="name" class="form-control" id="name" aria-label="First name" required>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label for="lastname" class="form-label">Sobrenome</label>
+                                        <input type="text" name="lastName" class="form-control" id="lastname" aria-label="Last name" required>
+                                    </div>
+                                    <!--Nome e sobrenome-->
+
+                                    <!--contato-->
+                                    <div class="col-sm-12">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" name="mail" class="form-control" id="email">
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label for="inputFone" class="form-label">Telefone / Whatsapp</label>
+                                        <input type="tel" name="fone" class="form-control" id="inputFone" placeholder="(xx) xxxxx-xxxx">
+                                    </div>
+                                    <!--contato-->
+
+
+                                    <!--criança/adulto-->
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="type" id="type" type="radio" name="type" id="flexRadioDefault1" checked>
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Adulto
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="type" type="radio" name="type" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Criança (até 12 anos)
+                                        </label>
+                                    </div>
+                                    <!--criança/adulto-->
+
+                                    <!--Observações-->
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" name="observation" id="observation" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                            <label for="floatingTextarea2">Observações</label>
+                                        </div>
+                                    </div>
+                                    <!--Observações-->
+                                    <button disabled=true id="sendForm" class="btn btn-dark" type="submit">Confirmar
+                                        Presença</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--modal-->
+        </div>
+        <!--Google map-->
+        <div class="map-ouro-preto">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31753860.3807388!2d-69.6430882621393!3d-13.706111704049494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e0!3m2!1spt-BR!2sbr!4v1659011292463!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!--Google Maps-->
+    </div>
+    <footer></footer>
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.mask.js"></script>
+    <script src="/static/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/static/js/informations.js"></script>
+</body>
+
+</html>

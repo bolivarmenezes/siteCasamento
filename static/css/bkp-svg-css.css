@@ -1,0 +1,174 @@
+#path868-8 {
+    /*coração roxo baixo esquerda*/
+    animation: movimento-coracoes 5s ease-in-out infinite alternate;
+}
+
+#path868-2 {
+    /*coração vermelho alto direito */
+    animation: movimento-coracoes2 1s ease-in-out infinite alternate;
+}
+
+#path868-9 {
+    /*coração norte*/
+    animation: movimento-coracoes3 10s infinite;
+}
+
+#path868-9-5 {
+    /*coração verde cima direita*/
+    animation: movimento-coracoes4 7s infinite ease-in-out alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#svg_36-9 {
+    /*flor roxa da direita de cima*/
+    animation: gira-flor-horario 18s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#svg_42-8 {
+    /*flor vermelha da esquerda meio*/
+    animation: gira-flor-horario 20s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#svg_33-23-8 {
+    /*flor rosa da esquerda de cima*/
+    animation: gira-flor-antihorario 30s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#svg_36-9-1 {
+    /*flor azul da direita de baixo*/
+    animation: gira-flor-horario 20s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#svg_42-8-6 {
+    /*flor amarela da direita de baixo*/
+    animation: gira-flor-antihorario 20s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#svg_33-23 {
+    /*flor rosa da direita meio*/
+    animation: gira-flor-antihorario 30s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#svg_33-23-5 {
+    /*flor amarela topo*/
+    animation: gira-flor-horario 50s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#path868-36-5-3-0-2-1 {
+    /*coração marrom meio esquerda*/
+    animation: movimento-coracoes5 7s infinite ease-in-out alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes movimento-coracoes {
+    0% {
+        transform: translate(-1px);
+        fill-opacity: 85%;
+    }
+    50% {
+        transform: translate(0.5px) scale(1.03);
+        fill-opacity: 95%;
+    }
+    100% {
+        transform: translate(1.1px);
+        fill-opacity: 100%;
+    }
+}
+
+@keyframes movimento-coracoes2 {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: translate(2px, -5px);
+        transform: rotateZ(1deg);
+    }
+}
+
+@keyframes movimento-coracoes3 {
+    0% {
+        transform: scale(0.97);
+    }
+    40% {
+        transform: scale(1.05) rotateZ(1.3deg);
+    }
+    50% {
+        transform: scale(1.1) rotate3d(-10deg);
+    }
+    100% {
+        transform: scale(0.97) rotateZ(0);
+    }
+}
+
+@keyframes movimento-coracoes4 {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(0deg) scale(1.2);
+        fill: seagreen;
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes movimento-coracoes5 {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(10deg) scale(1.05);
+        fill: blue;
+    }
+    75% {
+        transform: rotate(50deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        fill: purple;
+    }
+}
+
+@keyframes gira-flor-horario {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes gira-flor-antihorario {
+    from {
+        transform: rotateZ(360deg);
+    }
+    to {
+        transform: rotateZ(0deg);
+    }
+}

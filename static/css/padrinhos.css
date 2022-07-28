@@ -1,0 +1,142 @@
+.containerTexto {
+    display: flex;
+    font-size: 16pt;
+    padding: 2em 2em 0em 2em;
+    justify-content: center;
+}
+
+.containerTexto a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.padrinhos {
+    text-align: right;
+    padding-right: 2em;
+    width: 20%;
+}
+
+.madrinhas {
+    padding-left: 2em;
+    width: 20%;
+}
+
+.texto {
+    text-align: center;
+    padding: 5em;
+    width: 50%;
+}
+
+.certificado {
+    font-weight: bolder;
+    font-size: 0.9em;
+    width: 45em;
+    height: 2em;
+    text-align: right;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 10em;
+    align-items: flex-end;
+    padding-right: 10em;
+}
+
+@media (max-width: 1300px) {
+    .containerTexto {
+        font-size: 14pt;
+        padding: 0em;
+        justify-content: center;
+    }
+    .padrinhos {
+        text-align: right;
+        padding-right: 1em;
+        width: 20%;
+    }
+    .madrinhas {
+        padding-left: 1em;
+        width: 20%;
+    }
+    .texto {
+        text-align: center;
+        margin-top: 5em;
+        padding: 1.5em;
+        width: 50%;
+    }
+    footer {
+        padding-right: 5em;
+    }
+}
+
+@media (max-width: 800px) {
+    .containerTexto {
+        font-size: 14pt;
+        padding: 0em;
+        justify-content: center;
+        margin-top: 1em;
+    }
+    .padrinhos {
+        text-align: right;
+        padding-right: 0em;
+        width: 20%;
+    }
+    .madrinhas {
+        padding-left: 0em;
+        width: 20%;
+    }
+    .texto {
+        text-align: center;
+        padding: 0.35em;
+        width: 50%;
+    }
+    .certificado {
+        width: 43em;
+        height: 1.5em;
+        padding-right: 0.3em;
+    }
+    footer {
+        height: 10em;
+        align-items: flex-end;
+        padding-right: 0.3em;
+    }
+}
+
+@media (max-width: 600px) {
+    .containerTexto {
+        display: flex;
+        font-size: 1em;
+        padding: 0em;
+        justify-content: space-between;
+        padding-top: 1em;
+    }
+    .padrinhos {
+        text-align: right;
+        padding-right: 0.5em;
+        width: 20%;
+        font-size: 0.9em;
+        min-width: 95px;
+    }
+    .madrinhas {
+        padding-left: 0.5em;
+        width: 20%;
+        font-size: 0.9em;
+        min-width: 95px;
+    }
+    .texto {
+        text-align: center;
+        padding: 0em;
+        font-size: 1.05em;
+        padding-top: 1em;
+        margin-top: 1em;
+        width: 55%;
+    }
+    .certificado {
+        width: 22em;
+    }
+    footer {
+        height: 12em;
+        padding-right: 0em;
+    }
+}

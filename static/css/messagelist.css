@@ -1,0 +1,55 @@
+#mainMessages {
+    padding-left: 5em;
+    padding-right: 5em;
+    font-size: 1em;
+}
+
+#allMessages {
+    margin-top: 3em;
+    font-size: 15pt;
+}
+
+.message {
+    font-style: italic;
+    width: 100%;
+    text-align: left;
+    background-color: #2f45382f;
+    border-radius: 0.5em;
+    padding: 2em 2em 2em 10em;
+}
+
+.name {
+    text-align: right;
+    font-weight: bolder;
+    padding-right: 2em;
+    padding-bottom: 3em;
+}
+
+@media (max-width: 1000px) {
+    .message {
+        padding-left: 5em;
+    }
+    #allMessages {
+        margin-top: 1em;
+    }
+    @media (max-width: 700px) {
+        #mainMessages {
+            padding-left: 0.1em;
+            padding-right: 0.1em;
+        }
+        .message {
+            padding-left: 0.3em;
+            border-radius: 0.3em;
+            padding: 0.3em;
+        }
+        #allMessages {
+            margin-top: 0.5em;
+            font-size: 1.2em;
+        }
+        .name {
+            text-align: right;
+            padding-right: 0.5em;
+            padding-bottom: 1.5em;
+        }
+    }
+}

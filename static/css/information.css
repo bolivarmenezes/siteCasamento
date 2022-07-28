@@ -1,0 +1,142 @@
+    .location-info {
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        width: 100%;
+        padding-bottom: 2em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .info img {
+        z-index: 1;
+        width: 100%;
+        max-width: 40em;
+        margin-top: 1.5em;
+    }
+
+    #location-address {
+        padding-top: 1.5em;
+        height: 100%;
+        font-family: 'lora';
+        font-size: 1.2em;
+        font-weight: 600;
+        z-index: 10;
+        margin-left: -14em;
+        background-color: rgba(255, 255, 255, 0.342);
+    }
+
+    #location-address:hover {
+        background-color: rgb(255, 255, 255);
+    }
+
+    #location-address p {
+        margin: 0.05em;
+    }
+
+    .useful-links {
+        padding-bottom: 3em;
+        padding-top: 2em;
+    }
+
+    .useful-links .list-group {
+        padding-top: 1em;
+        box-shadow: 0.2em 0.1em 3em #7b7f8179;
+        margin: 0 10em;
+        background-color: #7b7f8111;
+        border-radius: 0.3em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .useful-links .list-group a {
+        margin: 0.2em 1em 1em 1em;
+        width: 25em;
+        text-align: center;
+        border-radius: 0.3em;
+    }
+
+    .useful-links .list-group a:hover {
+        background-color: #2f4538;
+        font-weight: bolder;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .map-ouro-preto {
+        margin: 0 10em;
+    }
+
+    .modal-body input {
+        margin-bottom: 1em;
+    }
+
+    .modal-body button {
+        margin-top: 1em;
+    }
+
+    .formErr {
+        box-shadow: rgb(255, 0, 0) 0px 50px 100px -20px, rgb(255, 0, 0) 0px 30px 60px -30px, rgb(255, 0, 9) 0px -2px 6px 0px inset;
+    }
+
+    .formOk {
+        box-shadow: rgb(0, 255, 115) 0px 50px 100px -20px, rgb(0, 255, 98) 0px 30px 60px -30px, rgb(0, 255, 55) 0px -2px 6px 0px inset;
+    }
+
+    @media (max-width: 940px) {
+        .info img {
+            margin-top: 0;
+        }
+        .useful-links .list-group {
+            box-shadow: none;
+            background-color: inherit;
+            border-radius: 0;
+            margin: 0;
+        }
+        .useful-links .list-group a:hover {
+            box-shadow: unset;
+        }
+        .map-ouro-preto {
+            margin: 0;
+        }
+        #location-address {
+            padding-top: 1em;
+            height: 100%;
+            margin-left: 0em;
+            background-color: inherit;
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .location-info {
+            height: auto;
+            width: 100%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 1em;
+        }
+        .info {
+            padding-bottom: 0;
+        }
+        #location-address {
+            padding-top: 1em;
+            height: auto;
+            padding-top: 1em;
+            font-size: 1em;
+        }
+        .useful-links {
+            padding-top: 0;
+        }
+        .useful-links .list-group a {
+            width: 100%;
+            margin: 0.5em;
+            padding: 0.3em;
+        }
+    }

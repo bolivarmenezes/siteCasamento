@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/gallery.css" rel="stylesheet">
+    <title>Fotos</title>
+</head>
+
+<body class="bg-light text-body">
+    <nav class="py-2">
+        <div class="container" id="nav-menu">
+            <ul class="nav">
+                <li class="nav-item"><a href="/" class="nav-link link-dark px-2 active" aria-current="page">Início</a></li>
+                <li class="nav-item"><a href="/gallery.html" class="nav-link link-dark px-2">Fotos</a></li>
+                <li class="nav-item"><a href="/participate.html" class="nav-link link-dark px-2">Participe</a></li>
+                <li class="nav-item"><a href="/informacoes.html" class="nav-link link-dark px-2">Informações</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Galeria de fotos -->
+    <div class="containerGallery">
+    </div>
+    <!--Galeria de fotos -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalPictures" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titleModalPictures"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="bodyModalPictures" class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
+
+    <footer></footer>
+
+    <script src="/static/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/gallery.js"></script>
+
+</body>
+
+</html>

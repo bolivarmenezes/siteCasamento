@@ -1,0 +1,63 @@
+#path80-1 {
+    animation: movimento-nuvem-dir 90s ease-in-out infinite alternate;
+}
+
+#path80 {
+    animation: movimento-nuvem-dir 60s ease-in-out infinite alternate;
+}
+
+#path80-7 {
+    animation: movimento-nuvem-esq 60s ease-in-out infinite alternate;
+}
+
+#path80-3 {
+    animation: movimento-nuvem-esq 50s ease-in-out infinite alternate;
+}
+
+
+/*#path80-4 {
+    animation: movimento-nuvem-dir 60s ease-in-out infinite alternate;
+}*/
+
+#path8784 {
+    /*sol*/
+    animation: sol 60s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes movimento-nuvem-esq {
+    to {
+        transform: translate(-380px)
+    }
+}
+
+@keyframes movimento-nuvem-dir {
+    to {
+        transform: translate(380px)
+    }
+}
+
+@keyframes sol {
+    0% {
+        transform: rotateZ(0deg) scale(0.9);
+    }
+    10% {
+        transform: rotateZ(10deg) scale(0.95);
+    }
+    20% {
+        transform: rotateZ(20deg) scale(0.9);
+    }
+    30% {
+        transform: rotateZ(30deg) scale(0.95);
+    }
+    40% {
+        transform: rotateZ(40deg) scale(0.9);
+    }
+    50% {
+        transform: rotateZ(50deg) (0.95);
+    }
+    100% {
+        transform: rotateZ(360deg) scale(0.9);
+    }
+}

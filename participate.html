@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/participate.css" rel="stylesheet">
+
+    <title>Informações</title>
+</head>
+
+<body class="bg-light text-body">
+    <nav class="py-2">
+        <div class="container" id="nav-menu">
+            <ul class="nav">
+                <li class="nav-item"><a href="/" class="nav-link link-dark px-2 active" aria-current="page">Início</a></li>
+                <li class="nav-item"><a href="/gallery.html" class="nav-link link-dark px-2">Fotos</a></li>
+                <li class="nav-item"><a href="/participate.html" class="nav-link link-dark px-2">Participe</a></li>
+                <li class="nav-item"><a href="/informacoes.html" class="nav-link link-dark px-2">Informações</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-xxl bg-light">
+        <div class="main">
+            <div class="row">
+                <div class="col-md-6" id="area-options">
+                    <ul>
+                        <li>
+                            <a href="/messagelist.html" id="messages-list">
+                                <img src="static/icons/mensagem.png"> Mensagens
+                            </a> |
+                            <a href="#" id="message-for" data-bs-toggle="modal" data-bs-target="#modalMessage">
+                                Envie Mensagens
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="music-list" data-bs-toggle="modal" data-bs-target="#modalList">
+                                <img src="static/icons/musica.png"> Músicas
+                            </a>|
+                            <a href="#" id="music-for" data-bs-toggle="modal" data-bs-target="#modalMusic">Sugira Músicas</a>
+                        </li>
+                        <li>
+                            <a href="#" id="pictiure-for" data-bs-toggle="modal" data-bs-target="#modalPicture">
+                                <img src="static/icons/camera.svg"> Envie fotos
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-6" id="options">
+
+                    <div class="participate-initial">
+                        <img src="static/img/noivinhos2.png">
+                    </div>
+                    <div class="participate-message" style="display:none">
+                        <img class="msg-env" src="static/img/message-env.svg">
+                    </div>
+
+                    <div class="participate-pictiure" style="display:none">
+                        <img class="pic-env" src="static/img/pic-env.svg">
+                    </div>
+
+                    <div class="participate-music" style="display:none">
+                        <img class="notas" src="static/img/notas-musicais.svg">
+                        <img class="dance" src="static/img/danca.png">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal send message -->
+    <div class="modal fade" id="modalMessage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titleModalParticipateMsg">Mensagem para os noivos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="bodyModalParticipateMsg" class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Seu Nome (s):</label>
+                            <input type="text" class="form-control" id="messageName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Mensagem:</label>
+                            <textarea rows="7" class="form-control" id="messageText"></textarea>
+                        </div>
+                        <div class="submitModal">
+                            <button id="sendMsg" class="btn btn-dark" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
+
+    <!-- Modal picture-->
+    <div class="modal fade" id="modalPicture" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titleModalParticipatePicture">Nos envie Fotos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div id="bodyModalParticipatePicture" class="modal-body">
+
+                    <div class="text-center" id="gif_loading">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+
+                    <form method="post" id="formPic" enctype="multipart/form-data">
+                        <div id="send-pic" class="mb-3">
+                            <input name="pictures[]" id="inputFilePic" class="form-control" type="file" accept="*png, *jpeg, *jpg" multiple>
+                        </div>
+                        <div class="choosePicPreview">
+                        </div>
+                        <div class="submitModal">
+                            <button id="sendImg" class="btn btn-dark" type="submit">Enviar</button>
+                        </div>
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+    <!--modal-->
+
+
+    <!-- Modal music-->
+    <div class="modal fade" id="modalMusic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titleModalParticipateMusic">Sugira músicas para o dia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="bodyModalParticipateMusic" class="modal-body">
+                    <form>
+                        <div class="iputsModal">
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Seu Nome (opcional):</label>
+                                <input type="text" class="form-control" id="nameMsc">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Musica:</label>
+                                <input class="form-control" id="musicMsc">
+                            </div>
+                        </div>
+                        <div class="submitModal">
+                            <button id="sendMusic" class="btn btn-dark" type="submit">Enviar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
+
+    <!-- Modal list music-->
+    <div class="modal fade" id="modalList" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titleModalParticipateList"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="bodyModalParticipateList" class="modal-body">
+                    <div class="text-center" id="gif_loading">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
+
+    <script src="/static/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/participate.js"></script>
+
+
+</body>
+
+</html>
